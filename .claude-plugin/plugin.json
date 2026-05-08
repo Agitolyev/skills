@@ -1,0 +1,7 @@
+{
+  "name": "skills",
+  "description": "Agitolyev's personal Claude Code skills collection.",
+  "version": "0.1.0",
+  "author": { "name": "Agitolyev" },
+  "repository": "https://github.com/Agitolyev/skills"
+}
