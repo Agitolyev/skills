@@ -1,0 +1,12 @@
+{
+  "id": "agitolyev",
+  "name": "Agitolyev's Skills",
+  "owner": { "name": "Agitolyev" },
+  "plugins": [
+    {
+      "name": "skills",
+      "source": { "source": "github", "repo": "Agitolyev/skills" },
+      "description": "Agitolyev's personal Claude Code skills collection."
+    }
+  ]
+}
