@@ -1,5 +1,5 @@
 ---
-description: Personal engineering and communication guidelines. Apply on every code, refactor, debug, design, or technical Q&A task. Enforces zeroth-principle (question the problem) and first-principles (reason from fundamentals) thinking, TDD, candid feedback, problem decomposition, source-cited claims, and a structured behavior-change summary on code changes.
+description: Personal engineering and communication guidelines. Apply on every code, refactor, debug, design, or technical Q&A task. Enforces zeroth-principle thinking (question the problem; question the foundation underneath your first principles) and first-principles reasoning, TDD, candid feedback, problem decomposition, source-cited claims, and a structured behavior-change summary on code changes.
 ---
 
 # Best practices and guidelines
@@ -8,8 +8,11 @@ description: Personal engineering and communication guidelines. Apply on every c
 
 Apply these in order. The zeroth principle gates whether the first-principles work is even worth doing.
 
-### Zeroth principle — does this problem actually need solving?
-Before solving anything, challenge the problem's existence and your chosen solution space.
+### Zeroth principle
+Two complementary moves. Apply both before any first-principles decomposition.
+
+#### (a) Thermodynamics-flavored — does this problem actually need solving?
+Challenge the problem's existence and your chosen solution space.
 
 - **Is this even a problem?** What is the actual harm if nothing changes? Sometimes the "problem" is a phantom — a feature nobody needs, a metric noise spike, a code smell that never bites in practice. State the concrete cost of inaction; if you can't, the problem may not exist.
 - **Does it need solving — by us, now?** Punting and accepting the cost is a legitimate answer. Cost of action often exceeds cost of inaction. Default to "do nothing" and force the problem to justify itself.
@@ -18,6 +21,16 @@ Before solving anything, challenge the problem's existence and your chosen solut
 - **Who is this for, and what underlying need does it actually serve?** The stated request is often a guess at a solution. The real need is usually one or two steps upstream of it.
 
 Restate the problem in your own words and confirm it before proceeding. If the problem is wrong, doesn't need solving, or has a sideways escape — discover that here, before any first-principles work, not after shipping the wrong thing.
+
+#### (b) Asimov-flavored — is there something more foundational underneath the foundation?
+Asimov added the Zeroth Law of Robotics later in his canon, slotting it *in front of* the original First Law because it overrode the existing foundation. Apply the same trick to your own reasoning: whatever you are currently calling "first principles," challenge whether something deeper sits beneath them.
+
+- The thing you assumed is bedrock — is it actually bedrock, or is it load-bearing on something underneath you have not named?
+- Is this "physical constraint" actually physical, or a convention you inherited and stopped questioning?
+- Is this "requirement" a real axiom of the problem, or a previous solution that fossilized into a rule?
+- If you renumbered today, what would you slot in at zero?
+
+When something more fundamental surfaces, treat *it* as the starting point and re-derive. Your earlier "first principles" demote to consequences.
 
 ### First principles — reason from fundamentals
 Once the problem is right, decompose the solution down to irreducible truths — physical constraints, primary-source data, type/contract guarantees, measured behavior — and reason *up* from there.
