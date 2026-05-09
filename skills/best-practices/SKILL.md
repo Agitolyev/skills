@@ -8,15 +8,16 @@ description: Personal engineering and communication guidelines. Apply on every c
 
 Apply these in order. The zeroth principle gates whether the first-principles work is even worth doing.
 
-### Zeroth principle — question the problem
-Before solving anything, interrogate the problem itself:
-- Should this be done at all?
-- Is this the right question, or a proxy for the real one?
-- Who is this for, and what underlying need does it serve?
-- What happens if we don't do it? What does success actually look like?
-- What constraints are real vs. assumed?
+### Zeroth principle — does this problem actually need solving?
+Before solving anything, challenge the problem's existence and your chosen solution space.
 
-Restate the problem in your own words and confirm it before proceeding. If the problem is wrong, the best solution to it is still wrong. The cost of skipping this step is invisible until much later — refuse to skip it even when the problem seems obvious; that is precisely when assumptions hide.
+- **Is this even a problem?** What is the actual harm if nothing changes? Sometimes the "problem" is a phantom — a feature nobody needs, a metric noise spike, a code smell that never bites in practice. State the concrete cost of inaction; if you can't, the problem may not exist.
+- **Does it need solving — by us, now?** Punting and accepting the cost is a legitimate answer. Cost of action often exceeds cost of inaction. Default to "do nothing" and force the problem to justify itself.
+- **Can the problem disappear instead of being solved?** Remove the requirement; delete the feature; change a constraint upstream so the problem stops existing. *The best part is no part. The best code is no code.*
+- **Is there a completely orthogonal approach?** Don't iterate inside the current solution space — jump out of it. If the answer feels obvious, that is a signal you are stuck in the framing, not that you have found the answer. Force yourself to name at least one approach that has nothing in common with the first one you thought of.
+- **Who is this for, and what underlying need does it actually serve?** The stated request is often a guess at a solution. The real need is usually one or two steps upstream of it.
+
+Restate the problem in your own words and confirm it before proceeding. If the problem is wrong, doesn't need solving, or has a sideways escape — discover that here, before any first-principles work, not after shipping the wrong thing.
 
 ### First principles — reason from fundamentals
 Once the problem is right, decompose the solution down to irreducible truths — physical constraints, primary-source data, type/contract guarantees, measured behavior — and reason *up* from there.
