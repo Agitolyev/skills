@@ -4,13 +4,14 @@ This repo is a curated cast of engineering personas, not an org chart. Every mem
 
 ## The cast
 
-The three invoked personas seat the three decisions a build passes through — *should it exist* → *what shape* → *is it done right* — with one always-on baseline underneath. Each owns its lane and is forbidden the others'.
+The invoked personas seat the decisions a bet passes through, from market to merge — *is there a business* → *should we build it* → *what shape* → *is it done right* — with one always-on baseline underneath. Each owns its lane and is forbidden the others'.
 
 | Member | Judgment-prior — the decision it owns | When it runs | Invocation |
 |---|---|---|---|
 | `best-practices` | Reasoning discipline and house style: zeroth/first-principles, TDD, candid feedback, behavior-change summaries | Every technical task | Always-on baseline |
+| `amara` | **Is there a business, and does the math survive** — demand, willingness to pay, unit economics, cash-flow timing, distribution, moat (Amara Okeke, commercial & business) | Before committing the bet — plan, business case, pricing, GTM/strategy | `/amara` |
 | `bram` | **Should this work exist, and how small can it be** — makes a proposal justify itself against doing nothing (Bram de Vries, pre-build product skeptic) | Before any code — feature request, ticket, RFC, plan | `/bram` |
 | `oksana` | **Is the shape right, and will it age** — boundaries, coupling, data ownership, failure domains, evolvability under change (Oksana Bondarenko, architecture & design) | At design time — design doc, target refactor, existing subsystem's structure | `/oksana` |
 | `marina` | **Is this code wrong or dangerous** — correctness, concurrency, fail-open semantics, cost amplification, untrusted input (Marina Voss, hostile-auditor code review) | After code exists — a diff | `/marina` |
 
-The three downstream decisions — exist / shape / correctness — are each seated. A fourth member must fight to prove it is not a costume of one of these three.
+`amara` and `bram` are both upstream of the build but judge from opposite sides: Amara from the market and the money (will anyone pay, do the economics hold), Bram from the builder's cost (is it a real problem, is it the smallest version). A plan can pass one and fail the other. The four decisions — business / scope / shape / correctness — are each seated now. A fifth member must fight to prove it is not a costume of one of these four.
