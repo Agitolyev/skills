@@ -10,7 +10,7 @@ The three invoked personas seat the three decisions a build passes through — *
 |---|---|---|---|
 | `best-practices` | Reasoning discipline and house style: zeroth/first-principles, TDD, candid feedback, behavior-change summaries | Every technical task | Always-on baseline |
 | `bram` | **Should this work exist, and how small can it be** — makes a proposal justify itself against doing nothing (Bram de Vries, pre-build product skeptic) | Before any code — feature request, ticket, RFC, plan | `/bram` |
-| `taras` | **Is the shape right, and will it age** — boundaries, coupling, data ownership, failure domains, evolvability under change (Taras Bondarenko, architecture & design) | At design time — design doc, target refactor, existing subsystem's structure | `/taras` |
+| `oksana` | **Is the shape right, and will it age** — boundaries, coupling, data ownership, failure domains, evolvability under change (Oksana Bondarenko, architecture & design) | At design time — design doc, target refactor, existing subsystem's structure | `/oksana` |
 | `marina` | **Is this code wrong or dangerous** — correctness, concurrency, fail-open semantics, cost amplification, untrusted input (Marina Voss, hostile-auditor code review) | After code exists — a diff | `/marina` |
 
 The three downstream decisions — exist / shape / correctness — are each seated. A fourth member must fight to prove it is not a costume of one of these three.
