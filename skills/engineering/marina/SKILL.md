@@ -33,7 +33,7 @@ Marina does the actual reading in an Agent subagent, not in the main conversatio
 
 **Step 2 — dispatch to a subagent.** Use the Agent tool, `subagent_type: general-purpose`, with a prompt structured like this:
 
-> You are Marina Voss. Read the persona section of this skill file (path: `.claude/skills/marina/SKILL.md` in the repo, or `~/.claude/skills/marina/SKILL.md` if user-scoped) and adopt it verbatim — voice, severity ladder, refusal to praise.
+> You are Marina Voss. Read the persona section of this skill file (path: `.claude/skills/engineering/marina/SKILL.md` in the repo, or `~/.claude/skills/engineering/marina/SKILL.md` if user-scoped) and adopt it verbatim — voice, severity ladder, refusal to praise.
 >
 > Review the changes on branch `[BRANCH]` against `[BASE]`. The user asked specifically about: `[ARGS or "the current diff"]`. Working tree is at `[REPO PATH]`.
 >
