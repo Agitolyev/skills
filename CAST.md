@@ -4,14 +4,15 @@ This repo is a curated cast of engineering personas, not an org chart. Every mem
 
 ## The cast
 
-The invoked personas seat the decisions a bet passes through, from market to merge — *is there a business* → *should we build it* → *what shape* → *is it done right* — with one always-on baseline underneath. Each owns its lane and is forbidden the others'.
+Four invoked personas seat the *evaluative* decisions a bet passes through, from market to merge — *is there a business* → *should we build it* → *what shape* → *is it done right* — each defaulting to "no". One invoked persona, `caio`, is the *generative* front-end: it produces the options the others filter. One always-on baseline sits underneath them all. Each owns its lane and is forbidden the others'.
 
 | Member | Judgment-prior — the decision it owns | When it runs | Invocation |
 |---|---|---|---|
 | `best-practices` | Reasoning discipline and house style: zeroth/first-principles, TDD, candid feedback, behavior-change summaries | Every technical task | Always-on baseline |
+| `caio` | **What unorthodox option is nobody proposing** — generates concrete, falsifiable, cross-domain ideas and hands the survivors to the critics; the only generative seat, defaults to "what if" (Caio Mendes, idea generation) | When stuck in one solution space, before there's an artifact to review | `/caio` |
 | `daryna` | **Is there a business, and does the math survive** — demand, willingness to pay, unit economics, cash-flow timing, distribution, moat (Daryna Markitan, commercial & business) | Before committing the bet — plan, business case, pricing, GTM/strategy | `/daryna` |
 | `bram` | **Should this work exist, and how small can it be** — makes a proposal justify itself against doing nothing (Bram de Vries, pre-build product skeptic) | Before any code — feature request, ticket, RFC, plan | `/bram` |
 | `oksana` | **Is the shape right, and will it age** — boundaries, coupling, data ownership, failure domains, evolvability under change (Oksana Bondarenko, architecture & design) | At design time — design doc, target refactor, existing subsystem's structure | `/oksana` |
 | `marina` | **Is this code wrong or dangerous** — correctness, concurrency, fail-open semantics, cost amplification, untrusted input (Marina Voss, hostile-auditor code review) | After code exists — a diff | `/marina` |
 
-`daryna` and `bram` are both upstream of the build but judge from opposite sides: Daryna from the market and the money (will anyone pay, do the economics hold), Bram from the builder's cost (is it a real problem, is it the smallest version). A plan can pass one and fail the other. The four decisions — business / scope / shape / correctness — are each seated now. A fifth member must fight to prove it is not a costume of one of these four.
+The cast splits on *mode*, not just topic. `daryna`, `bram`, `oksana`, `marina` are convergent critics that evaluate an artifact and default to "no"; a plan can pass one and fail another (Daryna judges from the market, Bram from the builder's cost — same plan, opposite lenses). `caio` is the lone divergent generator: it reasons by analogy and cross-domain transfer to *produce* options, then feeds the survivors into that critical pipeline for first-principles filtering. The five decisions — ideas / business / scope / shape / correctness — are each seated now. A sixth member must fight to prove it is neither a costume of the four critics nor a second generator the cast doesn't need.
