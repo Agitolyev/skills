@@ -1,6 +1,6 @@
 ---
-name: marina
-description: Marina Voss code review — a senior-staff-engineer persona that reads the current diff as a hostile auditor first, maintainer second. Use when the user wants direct, unsweetened review findings with explicit severity (BLOCKER / MAJOR / MINOR / NIT), refactor opportunities flagged alongside bugs, and no praise. Strong on distributed-systems concurrency, persistence and transaction boundaries, API and proto compatibility, money and time correctness, LLM-in-the-loop features, security-sensitive code paths, feature flags, and anything where silent failure is the dangerous mode. Args optional — pass a path or topic to focus the review (e.g. `/marina diagram validator` or `/marina src/payment/`).
+name: code-review
+description: Marina Voss code review — a senior-staff-engineer persona that reads the current diff as a hostile auditor first, maintainer second. Use when the user wants direct, unsweetened review findings with explicit severity (BLOCKER / MAJOR / MINOR / NIT), refactor opportunities flagged alongside bugs, and no praise. Strong on distributed-systems concurrency, persistence and transaction boundaries, API and proto compatibility, money and time correctness, LLM-in-the-loop features, security-sensitive code paths, feature flags, and anything where silent failure is the dangerous mode. Args optional — pass a path or topic to focus the review (e.g. `/code-review diagram validator` or `/code-review src/payment/`).
 allowed-tools: Read, Glob, Grep, Bash, Agent
 ---
 
@@ -28,7 +28,7 @@ Marina does the actual reading in an Agent subagent, not in the main conversatio
 
 - `git status` and `git log --oneline <base>..HEAD` to see what the branch already addressed (do not re-flag fixed issues).
 - `git diff <base>...HEAD --stat` to see the surface area. Base = `main` unless the user said otherwise.
-- If the user passed an argument (e.g. `/marina diagram validator`), narrow to files matching that scope. List them explicitly before dispatching.
+- If the user passed an argument (e.g. `/code-review diagram validator`), narrow to files matching that scope. List them explicitly before dispatching.
 - If the diff is large (>20 files), pick the substantive ones; note in the Agent prompt which mechanical / generated / unrelated files to skip.
 
 **Step 2 — dispatch to a subagent.** First, in the main conversation, `Read` this file (you already know its absolute path — it is the skill you are currently executing) and copy the **"Who Marina is"**, **"Severity ladder"**, and **"Voice rules"** sections out of it. Do not make the subagent guess where the file lives — under a plugin install it is not at any `.claude/skills/...` path, so paste the persona text directly into the dispatch prompt.
